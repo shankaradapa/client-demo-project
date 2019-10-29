@@ -1,0 +1,7 @@
+---
+ - hosts: web
+   become: true
+   tasks:
+
+     - name: create docker image
+       shell: docker run -d --name my-image -p 8091:8080 jayaraju/docker_demo
